@@ -15,10 +15,20 @@ setuptools.setup(
     author="Outscal SAS",
     author_email="opensource@outscale.com",
     description="Framework to build/parse OpenAPI",
-    long_description=long_description,
+    long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/outscale/osc_openapi_framework",
-    classifiers=[],
+    # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
+    classifiers=[
+        "License :: OSI Approved :: BSD License",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Operating System :: OS Independent",
+    ],
+    license="BSD",
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
 )
