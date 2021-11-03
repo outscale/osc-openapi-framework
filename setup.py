@@ -31,4 +31,8 @@ setuptools.setup(
     license="BSD",
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
+    install_requires=[
+        "prance",
+        "openapi-spec-validator"
+    ]
 )
