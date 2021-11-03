@@ -4,8 +4,7 @@
 import itertools
 import json
 import sys
-
-import openapi.parser
+import parser
 
 
 class ObjectIdentifier:
