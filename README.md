@@ -30,8 +30,6 @@ $ pip install dist/osc_openapi_framework-*.whl
 
 ## Usage
 ### Parsing OpenAPI Data
-
-
 ```python
 from osc_openapi_framework.openapi.parser import parse as openapi_parse
 
@@ -41,6 +39,8 @@ openapi_data = '''
       title: Sample API
       description: Optional multiline or single-line description in [CommonMark](http://commonmark.org/help/) or HTML.
       version: 0.1.9
+    security:
+      - ApiKeyAuth: []
     servers:
       - url: http://api.example.com/v1
         description: Optional server description, e.g. Main (production) server
@@ -61,7 +61,9 @@ openapi_data = '''
                     items: 
                       type: string
 '''
-oapi = openapi_parse(openapi_data)
+with open('/tmp/openapi_test', 'w') as fd:
+  fd.write(openapi_data)
+oapi = openapi_parse('/tmp/openapi_test')
 ```
 
 ## License
