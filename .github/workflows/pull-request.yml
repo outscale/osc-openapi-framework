@@ -1,0 +1,21 @@
+name: Pull Request Tests
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  tests-packaging:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Package bdist
+      run: make build
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: osc-openapi-framework
+        path: |
+          dist/osc_openapi_framework-*.whl
+          dist/osc_openapi_framework-*.tar.gz
