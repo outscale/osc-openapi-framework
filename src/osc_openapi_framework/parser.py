@@ -2,7 +2,7 @@
 
 import logging
 import prance
-import schema
+from osc_openapi_framework import schema
 
 
 def parse(path):

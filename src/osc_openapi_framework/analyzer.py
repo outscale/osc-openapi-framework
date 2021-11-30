@@ -2,9 +2,7 @@
 # -*- coding:utf-8 -*-
 
 import itertools
-import json
-import sys
-import parser
+from osc_openapi_framework import parser
 
 
 class ObjectIdentifier:

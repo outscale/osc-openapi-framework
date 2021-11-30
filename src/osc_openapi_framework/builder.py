@@ -1,7 +1,6 @@
 # -*- coding:utf-8 -*-
 
-import analyzer
-import schema
+from osc_openapi_framework import analyzer, schema
 
 
 WAY_MAPPING = {
