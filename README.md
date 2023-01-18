@@ -1,4 +1,6 @@
 # OSC OpenAPI Framework
+[![Project Graduated](https://docs.outscale.com/fr/userguide/_images/Project-Graduated-green.svg)](https://docs.outscale.com/en/userguide/Open-Source-Projects.html)
+
 Build and parse OpenAPI data using its own structured python object.
 
 ## Features
